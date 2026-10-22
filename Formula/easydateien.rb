@@ -35,7 +35,7 @@ class Easydateien < Formula
 
   test do
     assert_predicate libexec/"easydateien", :executable?
-    assert_predicate libexec/"easydateien_common.py", :exist?
+    assert_path_exists libexec/"easydateien_common.py"
     assert_match "EasyDateien 1.4.7", shell_output("#{bin}/easydateien -v")
   end
 end
